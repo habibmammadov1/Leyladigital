@@ -38,7 +38,7 @@ const Blog = () => {
       <header className={styles.header}>
         <Section bg="secondary" spacing="xl">
           <RevealOnScroll>
-            <h1 className={styles.title}>Bloq və İnsaytdar</h1>
+            <h1 className={styles.title}>Bloq və İnsaytlar</h1>
             <p className={styles.subtitle}>Rəqəmsal məhsul yaradılması dünyasına dair düşüncələr, strategiyalar və dərin texniki araşdırmalar.</p>
           </RevealOnScroll>
         </Section>

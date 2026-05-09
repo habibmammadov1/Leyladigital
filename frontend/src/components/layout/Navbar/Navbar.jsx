@@ -26,7 +26,7 @@ const Navbar = () => {
   });
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header ref={navRef} className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo} onClick={() => setIsMenuOpen(false)}>
           LeylaDigital
@@ -61,7 +61,7 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Nav */}
-      <div ref={navRef} className={`${styles.mobileNav} ${isMenuOpen ? styles.mobileNavOpen : ''}`}>
+      <div className={`${styles.mobileNav} ${isMenuOpen ? styles.mobileNavOpen : ''}`}>
         <ul className={styles.mobileNavList}>
           {navLinks.map((link) => (
             <li key={link.path}>
