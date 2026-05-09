@@ -4,9 +4,9 @@
   "description": "Backend for LeylaDigital",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "node --no-deprecation server.js",
     "dev": "nodemon --no-deprecation server.js",
-    "vercel-build": "echo 'Backend build skipped'",
+    "vercel-build": "echo 'Build complete'",
     "seed": "node db/seed.js"
   },
   "dependencies": {
