@@ -8,6 +8,8 @@ require('dotenv').config();
 const { testConnection } = require('./config/db');
 const routes = require('./routes');
 const errorHandler = require('./middleware/errorHandler');
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpecs = require('./config/swagger');
 const logger = require('./utils/logger');
 
 const app = express();
@@ -50,6 +52,9 @@ if (!isProduction) {
 
 // Routes
 app.use('/api', routes);
+
+// API Documentation (Swagger)
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpecs));
 
 // Health check endpoint
 app.get('/api/health', async (req, res) => {
